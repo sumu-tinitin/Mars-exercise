@@ -1,18 +1,17 @@
 package com.app.demo.dao;
 
-import com.app.demo.domain.Person;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import javax.swing.text.html.Option;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
-import java.util.Optional;
+import com.app.demo.domain.Person;
 
 @Repository
 public class PersonDaoImpl implements PersonDao {

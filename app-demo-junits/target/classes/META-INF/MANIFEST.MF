@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: user
+Build-Jdk: 11.0.3
+Implementation-Title: app-demo
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.app.demo
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/app-demo
+Created-By: Maven Integration for Eclipse
+

@@ -5,6 +5,7 @@ import com.app.demo.domain.Person;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,9 +22,9 @@ public class AppDemo implements CommandLineRunner {
 	private final PersonDao personDao;
 	private final Scanner in;
 
-	public AppDemo(PersonDao personDao) {
+	public AppDemo(PersonDao personDao, InputStream appInputStream) {
 		this.personDao = personDao;
-		this.in = new Scanner(System.in);
+		this.in = new Scanner(appInputStream);
 	}
 
 	@Override
@@ -211,7 +212,7 @@ public class AppDemo implements CommandLineRunner {
 		return person;
 	}
 
-	private String getInput(final String label, final int minLength, final int maxLength) {
+	public String getInput(final String label, final int minLength, final int maxLength) {
 		boolean isInputValid;
 		String input;
 		do {
